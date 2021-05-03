@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<style>
+
+    #grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    margin: 0px;
+    height: 100%;
+    }
+
+    #navbar{
+        position: fixed;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: lightgray;
+        grid-column: 1/2;
+        grid-row: 0/1;
+        border: #523F38;
+        border-width: 2px 2px 0px 2px;
+        border-style: solid;
+        color: rgb(65, 63, 63);
+    }
+
+    #navHeader{
+        padding: 10px;
+        font-size: 24px;
+        align-self: center;
+
+    }
+
+
+    .nav-element{
+        
+        padding: 20px 10px 20px 10px;        
+        border: #523F38;
+        border-width: 1px 0px 1px 0px;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: center;
+        font-size: 20px;
+    }
+
+    .nav-link{
+        text-decoration: none;
+        color: rgb(65, 63, 63);
+    }
+
+    #firstElement{
+        border: #523F38;
+        border-width: 2px 0px 1px 0px;
+        border-style: solid;
+    }
+
+    #lastElement{
+        border: #523F38;
+        border-width: 1px 0px 2px 0px;
+        border-style: solid;
+    }
+
+    #main-doc{
+        grid-column: 2/3;
+        grid-row: 0/1;
+        background-color: rgb(233, 231, 231);
+        
+    }
+
+    .main-section{
+        margin: 10px 80px 10px 10px;
+        padding: 10px
+    }
+
+    .sectionHeader{
+        font-size: 30px;
+    }
+    .sectionSubheader{
+        font-size: 20px;
+    }
+    .sectionParagraph{
+        padding: 0px 0px 0px 20px;
+        line-height: 25px;
+    }
+
+    #displayHolder{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .displayImg{
+        width: 40%;
+        height: auto;
+    }
+
+    .codeHolder{
+        background-color: lightgray;
+        border-radius: 10px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    @media(max-width: 800px){
+        #grid{
+            grid-template-columns: 12% 88%;
+            
+        }
+        #navbar{
+            position: fixed;
+            width: 12%;
+            grid-column: 1/2;
+            grid-row: 0/1;
+        }
+        #navHeader{
+            font-size: 14px;
+        }
+        .nav-element{
+            font-size: 12px;
+        }
+        
+    }
+    pre {
+        tab-size: 2;
+        text-align : left;
+        height: auto;
+        max-height: 240px;
+        overflow: auto;
+        word-break: normal !important;
+        word-wrap: normal !important;
+        white-space: pre !important;
+    }
+    footer{
+        background-color: rgb(233, 231, 231);
+        text-align: center;
+        padding: 5px;
+    }
+
+</style>
+<html>
+    <body id="grid">
+        <div name="navBarLeft">
+            <nav id="navbar">
+                <header id="navHeader">
+                    Emergency ID Documentation
+                </header>
+                <div class="nav-element" id="firstElement">
+                    <a class="nav-link" href="#introduction">Introduction</a>
+                </div>
+                <div class="nav-element">
+                    <a class="nav-link" href="#functionality">Functionality</a>
+                </div>
+                <div class="nav-element">
+                    <a class="nav-link" href="#usage">Usage</a>
+                </div>
+                <div class="nav-element">
+                    <a class="nav-link" href="#graphic_display">Graphic Display</a>
+                </div>
+                <div class="nav-element" id="lastElement">
+                    <a class="nav-link" href="#code">Code</a>
+                </div>
+            </nav>
+        </div>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header class="sectionHeader">Introduction</header>
+                <p class="sectionSubheader">Welcome to Emergency ID!</p>
+                <p class="sectionParagraph">Emergency ID is a mobile application
+                    designed by Max Phoenix (and team).
+                    The application aims to utilize the new norm of everyone
+                    having cellphones in order to help in medical emergencies.
+                    With the Emergency ID app, the user will have a simple yet
+                    extremely useful list of information regarding
+                    identification, medical issues, and whom ro contact in case
+                    of emergency. Simply opening
+                    the app could be the difference for someone as the app will
+                    allow helpers to quickly contact
+                    the neccesary parties and quickly inform medical responders
+                    of any neccesary knowledge, leading to better treatment.
+                </p>
+
+            </section>
+            <section class="main-section" id="functionality">
+                <header class="sectionHeader">Functionality</header>
+                <p class="sectionSubheader">The Emergency ID app has many useful
+                    features!</p>
+                <p class="sectionParagraph" style="font-size: 18px;">Applications
+                    Features</p>
+                <ul class="sectionParagraph" style="padding-left: 40px;">
+                    <li>
+                        Easy to update information
+                        <ul>
+                            <li>Medical issues</li>
+                            <li>Allergies</li>
+                            <li>Emergency contact</li>
+                        </ul>
+                        <li>Quick call to emergency contacts</li>
+                        <li>Prewritten tmergency text message to contacs</li>
+                        <li>Email user if phone is found lost</li>
+                    </li>
+                </ul>
+                <p class="sectionParagraph" style="font-size: 18px;">Application Data</p>
+                <ul class="sectionParagraph" style="padding-left: 40px;">
+                    <li>Name</li>
+                    <li>Medical issues</li>
+                    <li>Allergies</li>
+                    <li>Date of birth</li>
+                    <li>Email</li>
+                    <li>Phone number</li>
+                    <li>Emergency contact's name</li>
+                    <li>Emergency contact's phone number</li>
+                </ul>
+            </section>
+            <section class="main-section" id="usage">
+                <header class="sectionHeader">Usage</header>
+                <p class="sectionSubheader">Short App Usage Description</p>
+                <p style="font-size: 18px;">First Time Use</p>
+                <p class="sectionParagraph">
+                    When the user first opens the Emergency Id application an
+                    entry page will de displayed.
+                    The user will be prompted to fill in a series of text entry
+                    feild corresponding to the
+                    neccesary section, for example allergies. The entry page is
+                    diveded into two sections, the personal
+                    information and the emergency contact information. The entry
+                    feild values are intially set to "N/A"
+                    and if the user does not change or leaves a feild blank the
+                    value will be saved as "N/A" otherwise
+                    the new information will be recorded. For example when
+                    prompted to input information regarding allergies the
+                    user could leave the feild blank for "N/A" or input their
+                    allergies so medical responders would know
+                    in case of emergency.
+                </p>
+                <p class="sectionParagraph">
+                    The user can the enter their emergency contacts'
+                    information. The contact information includes
+                    the contact name and their phone number. The app initially
+                    gives the user two emergency contacts, however the user can
+                    later
+                    edit this and add up to two more contacts or remove
+                    contacts. If the user leaves a contact information blank it
+                    will
+                    not be added, and if the user leaves both contact
+                    information feilds blank the app will just automatically add
+                    911
+                    in place of an emergency contact.
+                </p>
+                <p class="sectionParagraph">
+                    Once the user has entered all their desired information the
+                    main app will open and display the information.
+                </p>
+                <p style="font-size: 18px;">Normal Usage</p>
+                <p class="sectionParagraph">On every subsequent opening of the
+                    app, the entry page will not be displayed and instead the
+                    app will load
+                    the main display page and show all the users vital emergency
+                    information. This app display can be seen in the following
+                    section.
+                    The main display shows the user name at the top for easy
+                    identification followed by the user's personal information.
+                    The personal information shows the user's medical issues and
+                    allergies at the top fo the section and then one can
+                    scroll to see more information like the user's date of birth
+                    and phone number and email (useful if the phone is found
+                    lost).
+                    The personal section may show more based on the phone's
+                    height. Below the personal information the contact
+                    information
+                    is displayed, showing the contact's name and then phone
+                    number.
+                </p>
+                <p style="font-size: 18px;">Calling</p>
+                <p class="sectionParagraph">To call a contact simplfy press the
+                    listed phone number on the display.</p>
+                <p style="font-size: 18px;">Texting</p>
+                <p class="sectionParagraph">To send a prewritten emergency text
+                    alerting the contact long press the listed number.</p>
+                <p style="font-size: 18px;">Email</p>
+                <p class="sectionParagraph">To email the user if phone is found lost simplfy press the
+                    listed email in thw personal section of on the display. The app will redirect to the 
+                native email application.</p>
+                <p style="font-size: 18px;">Settings and Settings Page</p>
+                <p class="sectionParagraph">
+                    The user can access the settings page, which is the same as
+                    the initial entry page, by swiping to
+                    the right on the display. The settings page will the be
+                    loaded with the current inforation loaded into
+                    the entry feilds. If the user wants to edit or remove the
+                    information they can easily click on the entry feild
+                    and edit the text. The user can also edit the contact
+                    information or amount of contacts. There is a floating
+                    action
+                    button at the bottom right hand corner of the display.
+                    Pressing the button will add a set of additional contact
+                    entry feilds.
+                    The user can also remove unwanted additional contacts by
+                    swiping right on either the contact name or contact
+                    phone number feild. Once the user is satisfied with the
+                    chages to the infomration they can press
+                    a back button at the top left hand corner of the display and
+                    return the the main display with the
+                    updated information.
+                </p>
+
+
+            </section>
+            <section class="main-section" id="graphic_display">
+                <header class="sectionHeader">Graphic Display</header>
+                <p class="sectionSubheader">Sample Displays From Emergency ID
+                    Application</p>
+                <div id="displayHolder">
+                    <figure id="fig1_loading">
+                        <img class="displayImg" src="appPhotos/loadingPage.png"
+                            alt="Loading" style="width:90%; height: auto;">
+                        <figcaption style="font-size: 18px;">Emergency ID
+                            Loading Screen</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="displayImg" src="appPhotos/mainPage.png"
+                            alt="Home" style="width:90%;">
+                        <figcaption style="font-size: 18px;">Emergency ID Home
+                            Screen</figcaption>
+                    </figure>
+                </div>
+                <p class="sectionParagraph">Seen above are two samples of the
+                    application's display.
+                    The image on the left depicts the laoding screen the user
+                    would be shown upon opening the application for the first
+                    time.
+                    The loading screen is seen with the entry feilds the user
+                    would fill out with the necessary emergency data.
+                </p>
+                <p class="sectionParagraph">
+                    On the right is the main display the user would see after
+                    filling out the laoding screen or upon
+                    subsequent launchings of the application. The emergency data
+                    is displayed vertically so any responders
+                    can quickly and easily know important personal and contact
+                    information.
+                </p>
+                <div id="displayHolder">
+                    <figure>
+                        <img class="displayImg" src="appPhotos/settingsPage.png"
+                            style="width:90%; height: auto;">
+                        <figcaption style="font-size: 18px;">Emergency ID
+                            Settings Screen</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="displayImg" src="appPhotos/text.png"
+                            style="width:90%; height: auto;">
+                        <figcaption style="font-size: 18px;">Emergency ID Sample
+                            Text</figcaption>
+                    </figure>
+                </div>
+                <p class="sectionParagraph">
+                    On the left is the application's settings page which can be
+                    accesed from the main display by a simple left swipe. The
+                    settings page
+                    is similiar to the loading page in styler and functionality.
+                    The settings page has the current data loaded into
+                    the entry feilds instead of "N/A" like in the loading page.
+                    Here the user can change the current data in the entry feild
+                    or add or remove emergency contact by using either the
+                    floating action button or using swipe gestures detailed in
+                    the
+                    usage section.
+                </p>
+                <p class="sectionParagraph">
+                    The image on the right shows an example of the prewritten
+                    text that would be sent to an emergency contact.
+                </p>
+                <p style="font-size: 10px;">*note: the images are taken from an iPhone 12 max so displays 
+                may look different depending on the height of device.</p>
+            </section>
+            <section class="main-section" id="code">
+                <header class="sectionHeader">Code</header>
+                <p class="sectionSubheader">Sample Section of Mobile App Dart Code</p>
+                <p class="sectionParagraph">The following section has snippets of some of the Dart
+                    code used in the developement of the mobile application. For size and simplicity the 
+                    full code is not included on this webpage, however the full dart code and the other neccesary files 
+                    can be seen at <a href="#" target="_blank">my github.</a>
+                </p>
+                <p class="sectionParagraph" style="font-size: 18px;"></p>Loading and setting page code snippet</p>
+                <div class="codeHolder">
+                <pre>
+                <code>  @override
+                    Widget build(BuildContext context) {
+                      data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
+                      List titleList = data.keys.toList();
+                      generateKeys();
+                      List keysList = keys.values.toList();
+                      List controllerList = controllers.values.toList();
+                      return Scaffold(
+                          ...</code>
+                </pre>
+                </div>
+                <p class="sectionParagraph" style="font-size: 18px;"></p>Home page code snippet</p>
+                <div class="codeHolder">
+                <pre>
+                <code>  class _MaxCardState extends State<MaxCard> {
+                        Map data = {};
+                        Map dataToPush = {};
+                        List emergencyDataList = [];
+                        JSONReader initializer = JSONReader();
+
+                        double heightDeterminer(int index, int length) {
+                            if (index == (length - 1)) {
+                                return 0.0;
+                            } else {
+                                return 15.0;
+                            }
+                        }
+
+                        final ScrollController _scrollController = ScrollController();
+                        final ScrollController _scrollController2 = ScrollController();
+
+                        @override
+                        Widget build(BuildContext context) {
+                        data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
+                        PersonalClass selfInstance = data['PersonalClass'];
+                        List contactList = data['ContactList'];
+                        Map dataToPush = data['MapData'];
+                        selfInstance.checkIfBlank();
+                        return Scaffold(
+                          ...</code>
+                </pre>
+                </div>
+                <p class="sectionParagraph" style="font-size: 18px;"></p>Personal class code snippet</p>
+                <div class="codeHolder">
+                <pre>
+                <code>  class PersonalClass {
+                    String dateOfBirth;
+                    String name;
+                    String phoneNumber;
+                    String phoneNumberDisplay;
+                    String allergies;
+                    String medicalIssues;
+                    String image;
+                    String email;
+                  
+                    PersonalClass(
+                        {this.dateOfBirth,
+                        this.name,
+                        this.phoneNumber,
+                        this.allergies,
+                        this.medicalIssues,
+                        this.image,
+                        this.email});
+                  
+                    void emailMe(String emailAdress) async {
+                      String uri1 =
+                          'googlegmail:///co?to$emailAdress&subject=Emergency%20Contact';
+                      String uri2 = 'mailto:$emailAdress?subject=Emergency%20Contact';
+                      if (await canLaunch(uri1)) {
+                        await launch(uri1);
+                      } else if (await canLaunch(uri2)) {
+                        await launch(uri2);
+                      } else {
+                        throw 'Could not launch $uri1';
+                      }
+                    }
+                          ...</code>
+                </pre>
+                </div>
+                <p class="sectionParagraph" style="font-size: 18px;"></p>Contact class code snippet</p>
+                <div class="codeHolder">
+                <pre>
+                <code>  
+                class ContactInformation {
+                    String nameFirstLast;
+                    String phoneNumber;
+                    String phoneNumberDisplay;
+                    String nameForText;
+                  
+                    ContactInformation({this.nameFirstLast, this.phoneNumber});
+                  
+                    String nameToUri() {
+                      nameForText = nameFirstLast.split(' ').join('%20');
+                      return nameForText;
+                    }
+                  
+                    String formatPhoneNumber() {
+                      if (phoneNumber.length == 10) {
+                        phoneNumberDisplay =
+                            '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)}
+                             - ${phoneNumber.substring(6, 10)}';
+                      } else if (phoneNumber == '911') {
+                        phoneNumberDisplay = '911';
+                      } else {
+                        phoneNumberDisplay = phoneNumber;
+                      }
+                      return phoneNumberDisplay;
+                    }
+                  
+                          ...</code>
+                </pre>
+                </div>
+                <p class="sectionParagraph" style="font-size: 18px;"></p>Initializer class code snippet</p>
+                <div class="codeHolder">
+                    <pre>
+                    <code>  
+                        class JSONReader {
+                            List contactList = [];
+                            String fileName = 'emergencyDataJSON';
+                            String stringJSON;
+                            Map<String, dynamic> jsonData = {};
+                            Map<String, dynamic> newData;
+                            File filePath;
+                            bool fileExists;
+                            JSONReader({this.newData});
+                          
+                            Future<String> get localPath async {
+                              final directory = await getApplicationDocumentsDirectory();
+                              return directory.path;
+                            }
+                          
+                            Future<File> get localFile async {
+                              final path = await localPath;
+                              return File('$path/$fileName');
+                            }
+                              ...</code>
+                    </pre>
+                    </div>
+                <p style="font-size: 10px;">*note: Flutter was used to develop the application</p>
+            </section>
+            <footer>Thank you for reading about Emergency ID! <br>Contact Information: Phoenm@rpi.email
+                <a href="#" target="_blank">github.</a>
+            </footer>
+        </main>
+        
+        <script
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+    
+</html>
